@@ -360,7 +360,6 @@ ggplot(combinedTotalSteps, aes(x=steps, fill=dataset)) +
 <pre><code class="r">## Derive days and group into &quot;weekday&quot; and &quot;weekend&quot;
 activityNew$day &lt;- weekdays(as.Date(activityNew$date))
 activityNew$daytype &lt;- &quot;undefined&quot;
-weekend &lt;- c(&quot;Saturday&quot;, &quot;Sunday&quot;)
 activityNew[grepl(&quot;Saturday|Sunday&quot;, activityNew$day),  &quot;daytype&quot;]  &lt;-  &quot;weekend&quot;
 activityNew[grepl(&quot;Monday|Tuesday|Wednesday|Thursday|Friday&quot;, activityNew$day),  &quot;daytype&quot;]  &lt;-  &quot;weekday&quot;
 </code></pre>

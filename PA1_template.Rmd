@@ -118,7 +118,6 @@ ggplot(combinedTotalSteps, aes(x=steps, fill=dataset)) +
 ## Derive days and group into "weekday" and "weekend"
 activityNew$day <- weekdays(as.Date(activityNew$date))
 activityNew$daytype <- "undefined"
-weekend <- c("Saturday", "Sunday")
 activityNew[grepl("Saturday|Sunday", activityNew$day),  "daytype"]  <-  "weekend"
 activityNew[grepl("Monday|Tuesday|Wednesday|Thursday|Friday", activityNew$day),  "daytype"]  <-  "weekday"
 ```
